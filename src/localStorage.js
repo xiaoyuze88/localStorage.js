@@ -10,11 +10,9 @@
  */
 
 ;(function(factory) {
-  if (typeof exports == "object" && typeof module == "object") // CommonJS
-    module.exports = factory();
-  else if (typeof define == "function" && define.amd) // AMD
-    return define([], factory);
-  else // Plain browser env
+  if (typeof define == "function" && define.amd)
+    return define(factory);
+  else
     this.localStorageJS = factory();
 })(function(){
 
